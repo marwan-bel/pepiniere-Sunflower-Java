@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.Agent.AgentController">
+     <children>
+      <JFXToolbar layoutX="184.0" layoutY="14.0" prefHeight="60.0" prefWidth="1359.0" style="-fx-min-height: 42; -fx-background-color: #222D32;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <Label prefHeight="23.0" prefWidth="228.0" style="-fx-font-size: 20; -fx-text-fill: #7387A8; -fx-font-weight: bold;" text="SunFlower" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Label>
+         </left>
+         <center>
+            <Pane prefHeight="51.0" prefWidth="1065.0" BorderPane.alignment="CENTER" />
+         </center>
+      </JFXToolbar>
+      <VBox layoutY="60.0" prefHeight="700.0" prefWidth="176.0" spacing="20.0" style="-fx-background-color: #2A3F54;">
+         <children>
+            <Label prefHeight="60.0" prefWidth="140.0" style="-fx-alignment: center; -fx-font-size: 16; -fx-text-fill: #7387A8; -fx-border-color: #7387A8; -fx-border-width: 0 0 2 0;" text="MENU" />
+            <JFXButton fx:id="btnService" layoutX="10.0" layoutY="109.0" onMouseClicked="#GestionService" prefHeight="42.0" prefWidth="228.0" style="-fx-alignment: baseline-center;" stylesheets="@../css/mainSheet.css" text="Gestion de Service" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               
+               <styleClass>
+                  <String fx:value="nav-button" />
+                  <String fx:value="bgService" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnEvenement" layoutX="10.0" layoutY="151.0" onMouseClicked="#GestionProduit" prefHeight="42.0" prefWidth="208.0" style="-fx-alignment: baseline-center;" stylesheets="@../css/mainSheet.css" text="Gestion Produit" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+             
+               <styleClass>
+                  <String fx:value="nav-button" />
+                  <String fx:value="bgEvent" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnForum" layoutX="10.0" layoutY="235.0" onMouseClicked="#GestionAstuce" prefHeight="42.0" prefWidth="173.0" style="-fx-alignment: baseline-center;" stylesheets="@../css/mainSheet.css" text="Gestion Astuce" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+             
+               <styleClass>
+                  <String fx:value="nav-button" />
+                  <String fx:value="bgForum" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnLogout" onMouseClicked="#GEstionRec" prefHeight="42.0" prefWidth="194.0" style="-fx-alignment: baseline-right;" stylesheets="@../css/mainSheet.css" text="Gestion /Réclamation" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+            
+               <styleClass>
+                  <String fx:value="nav-button" />
+                  <String fx:value="bgDeconnexion" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnLogout1" onMouseClicked="#GestionEvent" prefHeight="42.0" prefWidth="201.0" style="-fx-alignment: baseline-right;" stylesheets="@../css/mainSheet.css" text="Gestion Evenement" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="nav-button" />
+                  <String fx:value="bgDeconnexion" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnLogout11" onMouseClicked="#Gestionpromotion" prefHeight="42.0" prefWidth="201.0" style="-fx-alignment: baseline-right;" stylesheets="@../css/mainSheet.css" text="Gestion Promotion" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="nav-button" />
+                  <String fx:value="bgDeconnexion" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnLogout111" onMouseClicked="#deconnection" prefHeight="42.0" prefWidth="201.0" style="-fx-alignment: baseline-right;" stylesheets="@../css/mainSheet.css" text="Deconnection" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="nav-button" />
+                  <String fx:value="bgDeconnexion" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <AnchorPane fx:id="holderPane" layoutX="177.0" layoutY="61.0" prefHeight="694.0" prefWidth="1182.0" />
+   </children>
+</AnchorPane>

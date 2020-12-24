@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AjouterCommentaireController">
+   <children>
+      <Separator prefHeight="109.0" prefWidth="1213.0" />
+      <Label layoutX="15.0" layoutY="21.0" prefHeight="30.0" prefWidth="292.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #7387A8;" text="Liste des Sujets" />
+      <AnchorPane fx:id="anchorsujet" layoutY="114.0" prefHeight="670.0" prefWidth="1214.0">
+         <children>
+            <ListView fx:id="sujetListView" layoutX="259.0" layoutY="71.0" prefHeight="558.0" prefWidth="950.0" />
+            <JFXTabPane layoutX="4.0" layoutY="-48.0" prefHeight="290.0" prefWidth="316.0" stylesheets="@../css/mainSheet.css">
+               <tabs>
+                  <Tab text="Plantation">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="172.0" prefWidth="288.0">
+                           <children>
+                              <VBox prefHeight="179.0" prefWidth="236.0" spacing="10.0">
+                                 <children>
+                                    <RadioButton fx:id="btn_arbuste" mnemonicParsing="false" stylesheets="@../../../pepiniere/src/css/mainSheet.css" text="Planter un arbuste">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font></RadioButton>
+                                    <RadioButton fx:id="btn_arbre" mnemonicParsing="false" text="Planter un arbre">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font></RadioButton>
+                                    <RadioButton fx:id="btn_arbre_fruitier" mnemonicParsing="false" text="Planter un arbre fruitier">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font></RadioButton>
+                                    <RadioButton fx:id="btn_rosier" mnemonicParsing="false" text="Planter un rosier">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font></RadioButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Entretien">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="115.0" prefWidth="202.0" spacing="10.0">
+                                 <children>
+                                    <RadioButton fx:id="btn_arrosage" mnemonicParsing="false" text="Arrosage">
+                                       <font>
+                                          <Font name="System Bold Italic" size="15.0" />
+                                       </font></RadioButton>
+                                    <RadioButton fx:id="btn_culture" mnemonicParsing="false" text="Technique de culture">
+                                       <font>
+                                          <Font name="System Bold Italic" size="15.0" />
+                                       </font></RadioButton>
+                                    <RadioButton fx:id="btn_taille" mnemonicParsing="false" text="Taille">
+                                       <font>
+                                          <Font name="System Bold Italic" size="15.0" />
+                                       </font></RadioButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Conseils">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="62.0" prefWidth="184.0" spacing="10.0">
+                                 <children>
+                                    <RadioButton fx:id="btn_jardinage" mnemonicParsing="false" text="Jardinage Pratique">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font></RadioButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="X">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="81.0" prefHeight="589.0" prefWidth="962.0" visible="false">
+         <children>
+            <AnchorPane fx:id="espaceCom" layoutX="262.0" layoutY="121.0" prefHeight="579.0" prefWidth="799.0" visible="false">
+               <children>
+                  <TextField fx:id="nom_sujet" layoutX="51.0" layoutY="36.0" prefHeight="13.0" prefWidth="458.0" />
+                  <TextArea fx:id="description" layoutX="51.0" layoutY="63.0" prefHeight="63.0" prefWidth="458.0" />
+                  <HBox layoutX="55.0" layoutY="207.0" prefHeight="20.0" prefWidth="454.0">
+                     <children>
+                        <ImageView fx:id="addcomment" fitHeight="53.0" fitWidth="91.0" onMouseClicked="#addcomment" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/comment.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="partager_comment" mnemonicParsing="false" onMouseClicked="#signal_comment" prefHeight="27.0" prefWidth="96.0" text="Partager">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="confirmer" mnemonicParsing="false" onMouseClicked="#confirmer_modif" text="Confirmer" visible="false">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <JFXTextArea fx:id="textareacom" layoutX="52.0" layoutY="142.0" prefHeight="56.0" prefWidth="457.0" style="-fx-background-color: #ffffff;" />
+                  <Label layoutX="57.0" layoutY="126.0" text="Votre Commentaire :" />
+                  <ScrollPane layoutX="47.0" layoutY="243.0" prefHeight="321.0" prefWidth="576.0" stylesheets="@../css/mainSheet.css">
+                     <content>
+                        <VBox fx:id="Vcomm" prefHeight="268.0" prefWidth="577.0">
+                           <children>
+                              <HBox fx:id="Hcomm" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <TextArea fx:id="commentaires" prefHeight="135.0" prefWidth="459.0" />
+                                    <VBox fx:id="VcommB" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fx:id="signal_comment" fitHeight="49.0" fitWidth="53.0" onMouseClicked="#signal_comment" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/signaler.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="supp_comment" mnemonicParsing="false" text="Supprimer">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                          <Button fx:id="modif_comment" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="modifier">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+                  <Label layoutX="60.0" layoutY="10.0" text="Sujet">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="id_sujet" layoutX="515.0" layoutY="43.0" prefHeight="0.0" prefWidth="0.0" textFill="WHITE">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Label>
+                  <Accordion layoutX="-244.0" layoutY="83.0" prefHeight="205.0" prefWidth="219.0">
+                     <panes>
+                        <TitledPane fx:id="acord" animated="false" prefHeight="121.0" prefWidth="180.0" text=" Plantation ">
+                           <content>
+                              <VBox fx:id="vboxPlantation" prefHeight="70.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="Planter" mnemonicParsing="false" onMouseClicked="#btn_Planter" text="Planter un arbuste" />
+                                    <Button fx:id="planter1" mnemonicParsing="false" onMouseClicked="#btn_planter1" prefHeight="25.0" prefWidth="120.0" text="Planter un arbre" />
+                                    <Button fx:id="planter2" mnemonicParsing="false" onMouseClicked="#btn_planter2" text="Plantation d`un arbre fruitier" />
+                                    <Button fx:id="planter3" mnemonicParsing="false" onMouseClicked="#btn_planter3" text="Planter un rosier" />
+                                 </children>
+                              </VBox>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" text="Entretien">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox fx:id="vboxEntretien" layoutX="-2.0" layoutY="1.0" prefHeight="133.0" prefWidth="219.0">
+                                       <children>
+                                          <Button fx:id="Entretien" mnemonicParsing="false" onMouseClicked="#btn_Entretien" text="Arrosage" />
+                                          <Button fx:id="Entretien1" mnemonicParsing="false" onMouseClicked="#btn_Entretien1" text="Techniques de culture" />
+                                          <Button fx:id="Entretien2" mnemonicParsing="false" onMouseClicked="#btn_Entretien2" text="Taille" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" text=" Conseils ">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox fx:id="vboxConseils" layoutX="-4.0" layoutY="1.0" prefHeight="126.0" prefWidth="219.0">
+                                       <children>
+                                          <Button fx:id="Conseils" mnemonicParsing="false" onMouseClicked="#btn_Conseils" text="Jardinage pratique" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                     </panes>
+                  </Accordion>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorComm" layoutX="8.0" layoutY="42.0" prefHeight="742.0" prefWidth="1206.0" visible="false">
+         <children>
+            <HBox fx:id="Hbox" layoutX="468.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="238.0" prefWidth="758.0" spacing="5.0">
+               <children>
+                  <VBox prefHeight="142.0" prefWidth="636.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="439.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Sujet:" wrappingWidth="109.92919921875">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="txt_nomsujet" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" wrappingWidth="315.6708984375">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Description:" wrappingWidth="118.486328125">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                              <JFXTextArea fx:id="txt_desc" editable="false" prefHeight="60.0" prefWidth="495.0" wrapText="true">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font></JFXTextArea>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Commentaire:" wrappingWidth="127.486328125">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                              <JFXTextArea fx:id="txt_commentaire" prefHeight="60.0" prefWidth="482.0" promptText="Add your comment !" wrapText="true">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font></JFXTextArea>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="142.0" prefWidth="156.0">
+                     <children>
+                        <ImageView fx:id="btn_addcomment" fitHeight="49.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/comment.png" />
+                           </image>
+                          
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <ListView fx:id="listViewService" layoutX="388.0" layoutY="271.0" prefHeight="382.0" prefWidth="756.0" />
+         </children>
+      </AnchorPane>
+      <JFXComboBox fx:id="sujetCombo" layoutX="321.0" layoutY="73.0" prefHeight="25.0" prefWidth="145.0" promptText="Choisir un sujet" />
+   </children>
+</AnchorPane>

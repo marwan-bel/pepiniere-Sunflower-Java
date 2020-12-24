@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox fx:id="Hbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="162.0" prefWidth="1004.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="img" fitHeight="130.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true">
+         <HBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </HBox.margin>
+      </ImageView>
+      <VBox prefHeight="152.0" prefWidth="555.0">
+         <children>
+            <HBox prefHeight="76.0" prefWidth="501.0">
+               <children>
+                  <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Produit :" wrappingWidth="113.7890625">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtnom" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="219.6708984375">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin></Text>
+                  <Label fx:id="txt_prix2" contentDisplay="CENTER" prefHeight="65.0" prefWidth="175.0" text="100000  TND">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="68.0" prefWidth="487.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantite :" wrappingWidth="101.486328125">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtqte" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: Bold;" text="Text" wrappingWidth="50.8203125">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin></Text>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" prefHeight="152.0" prefWidth="278.0">
+         <children>
+            <HBox prefHeight="62.0" prefWidth="278.0">
+               <children>
+                  <Label fx:id="lblPrix" contentDisplay="CENTER" prefHeight="99.0" prefWidth="236.0" text="111111019 TDN" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="btn_del" fitHeight="43.0" fitWidth="181.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/delcart.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="82.0" prefWidth="180.0" spacing="30.0">
+               <children>
+                  <ImageView fx:id="btn_addqte" fitHeight="35.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/qtep.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="btn_delqte" fitHeight="39.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/qtem%20(1).png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets top="10.0" />
+   </padding>
+</HBox>

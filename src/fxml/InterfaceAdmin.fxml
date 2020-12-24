@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1268.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InterfaceAdminController">
+   <children>
+      <TableView fx:id="tableView" layoutX="412.0" layoutY="135.0" prefHeight="264.0" prefWidth="706.0">
+        <columns>
+          <TableColumn fx:id="np" prefWidth="213.0" text="Nom Pepinière" />
+          <TableColumn fx:id="nag" prefWidth="264.0" text="Nom Agent" />
+            <TableColumn fx:id="nomb" prefWidth="228.0" text="Nbre Reclamation" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="115.0" layoutY="107.0" prefHeight="518.0" prefWidth="227.0">
+         <children>
+            <ComboBox fx:id="co" layoutX="14.0" layoutY="28.0" onAction="#filtre" onMouseClicked="#filtre" prefHeight="34.0" prefWidth="209.0" promptText="Select Nom Pepinière" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="btn66" layoutX="421.0" layoutY="418.0" mnemonicParsing="false" onAction="#modEtat" prefHeight="31.0" prefWidth="139.0" text="Bloqué Compte" />
+      <Label layoutX="42.0" layoutY="26.0" prefHeight="30.0" prefWidth="292.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #7387A8;" text="Gestion des réclamations" />
+      <Separator layoutX="26.0" layoutY="64.0" prefHeight="4.0" prefWidth="1213.0" />
+   </children>
+</AnchorPane>

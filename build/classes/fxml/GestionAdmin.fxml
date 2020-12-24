@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="713.0" prefWidth="1380.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GestionAdminController">
+     <children>
+      <AnchorPane prefHeight="713.0" prefWidth="1380.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="713.0" fitWidth="1380.0" onKeyPressed="#rechercheUser" pickOnBounds="true">
+               <image>
+                  <Image url="@../resources/Amazing-Macro-Nature-Hd-Wallpaper.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="1268.0" layoutY="14.0" prefHeight="76.0" prefWidth="105.0">
+               <children>
+                  <ImageView fitHeight="61.0" fitWidth="89.0" layoutX="8.0" onMouseClicked="#LogOut" pickOnBounds="true">
+                     <image>
+                        <Image url="@../resources/logout.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="7.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/newlogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="150.0" prefHeight="552.0" prefWidth="173.0">
+         <children>
+            <VBox prefHeight="540.0" prefWidth="293.0" spacing="20.0">
+               <children>
+                  <JFXButton onMouseClicked="#GestionAdmin" prefWidth="293.0" stylesheets="@../css/mainSheet.css" text="Gestion admin" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="menuBoutons" />
+                        <String fx:value="menuBoutonsPressed" />
+                     </styleClass>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_gestuser" onMouseClicked="#GestionUsers" prefWidth="293.0" stylesheets="@../css/mainSheet.css" text="Gestiondes utilisateurs" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="menuBoutons" />
+                        <String fx:value="menuBoutonsPressed" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton onMouseClicked="#GestionPepiniere" prefWidth="293.0" stylesheets="@../css/mainSheet.css" text="Gestion des pépiniere" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="menuBoutons" />
+                        <String fx:value="menuBoutonsPressed" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton onMouseClicked="#GestionProduit" prefWidth="293.0" stylesheets="@../css/mainSheet.css" text="Gestion Produit" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="menuBoutons" />
+                        <String fx:value="menuBoutonsPressed" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton onMouseClicked="#GestionService" prefWidth="293.0" stylesheets="@../css/mainSheet.css" text="Gestion Service" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="menuBoutons" />
+                        <String fx:value="menuBoutonsPressed" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton onMouseClicked="#GestionCommande" prefWidth="293.0" stylesheets="@../css/mainSheet.css" text="Gestion Commande" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="menuBoutons" />
+                        <String fx:value="menuBoutonsPressed" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton onMouseClicked="#GestionAstuce" prefWidth="293.0" stylesheets="@../css/mainSheet.css" text="Gestion Astuce" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="menuBoutons" />
+                        <String fx:value="menuBoutonsPressed" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton onMouseClicked="#GestionReclamation" prefWidth="293.0" stylesheets="@../css/mainSheet.css" text="Gestion réclamations/Avis" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="menuBoutons" />
+                        <String fx:value="menuBoutonsPressed" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" onMouseClicked="#GestionEvent" prefWidth="293.0" stylesheets="@../css/mainSheet.css" text="Gestion Event/Promotion" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="menuBoutons" />
+                        <String fx:value="menuBoutonsPressed" />
+                     </styleClass>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Anchorgestadmin" layoutX="440.0" layoutY="58.0" prefHeight="633.0" prefWidth="773.0" visible="false">
+         <children>
+            <HBox layoutX="25.0" layoutY="484.0" prefHeight="100.0" prefWidth="768.0" spacing="175.0">
+               <children>
+                  <JFXButton fx:id="btn_addAmin" onMouseClicked="#addAdmin" prefHeight="44.0" prefWidth="121.0" style="-fx-background-color: green;" text="Ajouter" textFill="WHITE" />
+                  <JFXButton fx:id="btn_editAdmin" onMouseClicked="#editAdmin" prefHeight="44.0" prefWidth="121.0" style="-fx-background-color: blue;" text="Modifier" textFill="WHITE" />
+                  <JFXButton fx:id="btn_deleteAdmin" onMouseClicked="#deleteAdmin" prefHeight="44.0" prefWidth="121.0" style="-fx-background-color: red;" text="Supprimer" textFill="WHITE" />
+               </children>
+            </HBox>
+            <TableView fx:id="tableViewAdmin" layoutX="112.0" layoutY="68.0" onMouseClicked="#ShowOnClick" prefHeight="200.0" prefWidth="539.0">
+              <columns>
+                  <TableColumn fx:id="id_admin" minWidth="0.0" prefWidth="0.0" text="ID" />
+                <TableColumn fx:id="pseudo" prefWidth="100.0" text="Pseudo" />
+                  <TableColumn fx:id="nom" minWidth="0.0" prefWidth="72.0" text="Nom" />
+                  <TableColumn fx:id="prenom" prefWidth="77.0" text="Prenom" />
+                  <TableColumn fx:id="adresse" prefWidth="103.0" text="Adresse" />
+                  <TableColumn fx:id="email" prefWidth="127.0" text="E-mail" />
+                  <TableColumn fx:id="role_admin" prefWidth="58.0" text="Role" />
+              </columns>
+            </TableView>
+            <Text fill="WHITE" layoutX="183.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion d'administrateur">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Text>
+            <VBox layoutX="45.0" layoutY="291.0" prefHeight="138.0" prefWidth="252.0" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="txt_login" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Pseudo">
+                     <font>
+                        <Font size="15.0" />
+                     </font></JFXTextField>
+                  <JFXPasswordField fx:id="txt_password" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Mot de passe" />
+                  <JFXTextField fx:id="txt_adress" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Adresse" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="323.0" layoutY="291.0" prefHeight="138.0" prefWidth="252.0" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="txt_email" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Email" />
+                  <JFXTextField fx:id="txt_prenom" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Prénom" />
+                  <JFXTextField fx:id="txt_nom" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Nom" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <TextField fx:id="chercher" layoutX="669.0" layoutY="19.0" onKeyPressed="#rechercheAdmin" promptText="Rechercher" />
+            <Label fx:id="lbl_id" layoutX="56.0" layoutY="306.0" prefHeight="17.0" prefWidth="0.0" />
+            <ImageView fitHeight="40.0" fitWidth="27.0" layoutX="642.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/recherche.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Anchorgestclient" layoutX="305.0" layoutY="58.0" prefHeight="597.0" prefWidth="987.0" visible="false">
+         <children>
+            <HBox layoutX="156.0" layoutY="485.0" prefHeight="50.0" prefWidth="768.0" spacing="175.0">
+               <children>
+                  <JFXButton fx:id="btn_addClient" onMouseClicked="#addClient" prefHeight="44.0" prefWidth="121.0" style="-fx-background-color: green;" text="Ajouter" textFill="WHITE" />
+                  <JFXButton fx:id="btn_editClient" onMouseClicked="#editClient" prefHeight="44.0" prefWidth="121.0" style="-fx-background-color: blue;" text="Modifier" textFill="WHITE" />
+                  <JFXButton fx:id="btn_deleteClient" onMouseClicked="#deleteClient" prefHeight="44.0" prefWidth="121.0" style="-fx-background-color: red;" text="Supprimer" textFill="WHITE" />
+               </children>
+            </HBox>
+            <TableView fx:id="tableViewAdmin1" layoutX="252.0" layoutY="65.0" onMouseClicked="#ShowOnClick2" prefHeight="200.0" prefWidth="614.0">
+               <columns>
+                  <TableColumn fx:id="id_admin1" minWidth="0.0" prefWidth="0.0" text="ID" />
+                  <TableColumn fx:id="pseudo1" prefWidth="100.0" text="Pseudo" />
+                  <TableColumn fx:id="nom1" minWidth="0.0" prefWidth="72.0" text="Nom" />
+                  <TableColumn fx:id="prenom1" prefWidth="77.0" text="Prenom" />
+                  <TableColumn fx:id="adresse1" prefWidth="103.0" text="Adresse" />
+                  <TableColumn fx:id="email1" prefWidth="127.0" text="E-mail" />
+                  <TableColumn fx:id="role_admin1" prefWidth="58.0" text="Role" />
+                  <TableColumn fx:id="etatClient" prefWidth="75.0" text="Etat" />
+               </columns>
+            </TableView>
+            <Text fill="WHITE" layoutX="430.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion Client">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Text>
+            <VBox layoutX="168.0" layoutY="299.0" prefHeight="138.0" prefWidth="252.0" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="txt_login1" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Pseudo">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="txt_password1" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Mot de passe" />
+                  <JFXTextField fx:id="txt_adress1" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Adresse" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="533.0" layoutY="305.0" prefHeight="138.0" prefWidth="252.0" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="txt_email1" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Email" />
+                  <JFXTextField fx:id="txt_prenom1" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Prénom" />
+                  <JFXTextField fx:id="txt_nom1" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Nom" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <TextField fx:id="chercher1" layoutX="805.0" layoutY="19.0" onKeyPressed="#rechercheUser" promptText="Rechercher" />
+            <Label fx:id="lbl_id1" prefHeight="17.0" prefWidth="0.0" />
+            <ImageView fitHeight="40.0" fitWidth="27.0" layoutX="778.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/recherche.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Anchorgestclient1" layoutX="315.0" layoutY="68.0" prefHeight="597.0" prefWidth="987.0" visible="false">
+         <children>
+            <HBox layoutX="155.0" layoutY="497.0" prefHeight="50.0" prefWidth="768.0" spacing="175.0">
+               <children>
+                  <JFXButton fx:id="btn_addClient1" onMouseClicked="#addAgent" prefHeight="44.0" prefWidth="121.0" style="-fx-background-color: green;" text="Ajouter" textFill="WHITE" />
+                  <JFXButton fx:id="btn_editClient1" onMouseClicked="#editAgent" prefHeight="44.0" prefWidth="121.0" style="-fx-background-color: blue;" text="Modifier" textFill="WHITE" />
+                  <JFXButton fx:id="btn_deleteClient1" onMouseClicked="#deleteAgent" prefHeight="44.0" prefWidth="121.0" style="-fx-background-color: red;" text="Supprimer" textFill="WHITE" />
+               </children>
+            </HBox>
+            <TableView fx:id="tableViewAdmin11" layoutX="35.0" layoutY="58.0" onMouseClicked="#ShowOnClick3" prefHeight="200.0" prefWidth="808.0">
+               <columns>
+                  <TableColumn fx:id="id_admin11" minWidth="0.0" prefWidth="0.0" text="ID" />
+                  <TableColumn fx:id="nom11" minWidth="0.0" prefWidth="97.0" text="Nom" />
+                  <TableColumn fx:id="prenom11" prefWidth="77.0" text="Prenom" />
+                  <TableColumn fx:id="adresse11" prefWidth="103.0" text="Adresse" />
+                  <TableColumn fx:id="email11" prefWidth="127.0" text="E-mail" />
+                  <TableColumn fx:id="role_admin11" prefWidth="58.0" text="Role" />
+                  <TableColumn fx:id="etatClient1" prefWidth="75.0" text="Etat" />
+                  <TableColumn fx:id="cin" prefWidth="123.0" text="CIN" />
+                  <TableColumn fx:id="nom_pep" prefWidth="147.0" text="Nom du pépinière" />
+               </columns>
+            </TableView>
+            <Text fill="WHITE" layoutX="401.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion Agent ">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Text>
+            <VBox layoutX="168.0" layoutY="299.0" prefHeight="138.0" prefWidth="252.0" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="txt_login11" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Cin">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="txt_password11" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Mot de passe" />
+                  <JFXTextField fx:id="txt_adress11" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Adresse" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="533.0" layoutY="305.0" prefHeight="138.0" prefWidth="252.0" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="txt_email11" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Email" />
+                  <JFXTextField fx:id="txt_prenom11" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Prénom" />
+                  <JFXTextField fx:id="txt_nom11" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Nom" />
+                  <JFXTextField fx:id="nompep" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Nom du pépinière" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <TextField fx:id="chercher11" layoutX="825.0" layoutY="28.0" onKeyPressed="#rechercheAgent" promptText="Rechercher" />
+            <Label fx:id="lbl_id11" prefHeight="17.0" prefWidth="0.0" />
+            <ImageView fitHeight="40.0" fitWidth="27.0" layoutX="798.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/recherche.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AnchorgestCmd" layoutX="325.0" layoutY="78.0" prefHeight="597.0" prefWidth="987.0">
+         <children>
+            <HBox layoutX="319.0" layoutY="497.0" prefHeight="50.0" prefWidth="645.0" spacing="175.0">
+               <children>
+                  <JFXButton fx:id="btn_editClient11" onMouseClicked="#editCMD" prefHeight="44.0" prefWidth="121.0" style="-fx-background-color: blue;" text="Modifier" textFill="WHITE" />
+                  <JFXButton fx:id="btn_deleteClient11" onMouseClicked="#deleteCMD" prefHeight="44.0" prefWidth="121.0" style="-fx-background-color: red;" text="Supprimer" textFill="WHITE" />
+                  <JFXButton onMouseClicked="#statCMD" prefHeight="44.0" prefWidth="121.0" style="-fx-background-color: red;" text="Statistique" textFill="WHITE" />
+               </children>
+            </HBox>
+            <Text fill="WHITE" layoutX="401.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion Commande ">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Text>
+            <VBox layoutX="14.0" layoutY="103.0" prefHeight="138.0" prefWidth="252.0" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="etat_Cmd" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Etat du commande" />
+                  <JFXTextField fx:id="adresscmd" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Adresse" />
+                  <JFXTextField fx:id="mod_paim1" promptText="Mode de paiment" />
+                  <JFXTextField fx:id="montantCmd" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="montant" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <TextField fx:id="chercher111" layoutX="825.0" layoutY="28.0" onKeyPressed="#rechercheCmd" promptText="Rechercher" />
+            <ImageView fitHeight="40.0" fitWidth="27.0" layoutX="798.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/recherche.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="TabCmd" layoutX="293.0" layoutY="83.0" onMouseClicked="#ShowOnClickCMD" prefHeight="200.0" prefWidth="675.0">
+               <columns>
+                  <TableColumn fx:id="id_cmd" minWidth="0.0" prefWidth="0.0" text="id_cmd" />
+                  <TableColumn fx:id="id_client" minWidth="0.0" prefWidth="0.0" text="id_client" />
+                  <TableColumn fx:id="etat_cmd" prefWidth="108.0" text="etat_cmd" />
+                  <TableColumn fx:id="mode_pay" prefWidth="124.0" text="mode_p" />
+                  <TableColumn fx:id="lieu_liv" prefWidth="190.0" text="lieu_liv" />
+                  <TableColumn fx:id="dat_cmd" prefWidth="64.0" text="montant" />
+                  <TableColumn fx:id="montant" prefWidth="170.0" text="date_cmd" />
+               </columns>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </TableView>
+            <ImageView fitHeight="61.0" fitWidth="74.0" layoutX="902.0" layoutY="292.0" onMouseClicked="#Imprimer" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/printer.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="id_comm" prefHeight="17.0" prefWidth="0.0" />
+            <Label fx:id="id_Client" layoutX="76.0" layoutY="32.0" prefHeight="17.0" prefWidth="0.0" />
+         </children>
+      </AnchorPane>
+      <Pane fx:id="chartPane" layoutX="347.0" layoutY="82.0" prefHeight="495.0" prefWidth="987.0" />
+   </children>
+</AnchorPane>

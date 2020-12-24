@@ -1,0 +1,473 @@
+.note
+{
+     -fx-border:none;
+     -fx-background: transparent;
+    -fx-background-image: url(../../ressources/images/notebg7.png);
+    -fx-background-repeat: repeat;
+}
+
+.text-area, .text-area .viewport, .text-area .content {
+    -fx-background-color: transparent ;
+}
+/*
+    The tab bar
+*/
+
+.jfx-tab-pane .headers-region:hover {
+    -fx-background-color: #3e2723;
+}
+.jfx-tab-pane .headers-region:active {
+    -fx-background-color: #8d6e63;
+}
+.jfx-tab-pane .tab-header-background {
+    -fx-background-color: #8d6e63;
+}
+.jfx-tab-pane .tab-selected-line {
+    -fx-stroke: RED;
+    -fx-stroke-width: 3pt;
+}
+.jfx-tab-pane .tab-header-area .jfx-rippler{
+    -jfx-rippler-fill: RED;
+}
+
+   
+.errorTextField{
+    -fx-background-color: #FFF0F0;
+    -fx-border-color: #DBB1B1;
+}
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+.scroll-pane {
+   -fx-background-color: transparent;
+}
+
+.anchor-pane > .viewport {
+   -fx-background-image: url(../resources/backgrd.jpg);
+   -fx-background-repeat: no-repeat;
+    
+   -fx-background-size: cover ;
+   width: 100%;
+    height: 100%;
+}
+.anchor-pane {
+   -fx-background-image: url(../resources/backgrd.jpg);
+   -fx-background-repeat: no-repeat;
+   -fx-background-size: cover ;
+   width: 100%;
+    height: 100%;
+}
+
+.champsModifiable{
+
+    -fx-border-color: #AC58FA ;
+}
+
+.inputError
+{
+    -fx-border-color: #e01212; 
+}
+
+.inputNormal 
+{
+    -fx-border-color : rgba(0,0,0,0.3) ;
+    -fx-focus-color: -fx-control-inner-background ;
+    -fx-background-color: -fx-control-inner-background ;    
+}
+
+.inputNormal:focused
+{
+    -fx-background-color: #f9f9f9;
+    -fx-border-color :  #229abf;
+}
+
+.inputError
+{
+    -fx-border-color: #e01212;
+}
+
+.bgDeconnexion
+{
+    -fx-background-size: 12% ;
+    
+    -fx-background-position: 8%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url(../resources/logout.png);
+}
+
+.bgDeconnexion:hover
+{
+    -fx-background-image: url(../resources/logout.png);
+}
+.bgPoursuivre
+{
+    -fx-background-color: #7cb342;
+   -fx-cursor : hand;
+}
+.bgPoursuivre:hover
+{
+    -fx-background-color: #7cb400;
+   -fx-cursor : hand;
+}
+
+
+.bgAccueil
+{
+    -fx-background-size: 12% ;
+    -fx-background-position: 8%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url(../resources/Acceuil.png);
+}
+
+.bgAccueil:hover
+{
+    
+}
+.bgAccueil:active
+{
+     -fx-background-color: #f9f9f9;
+}
+
+.bgFormation
+{
+    -fx-background-size: 15% ;
+    -fx-background-position: 6%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url(../../ressources/images/responsable/formation.png);
+}
+
+.bgFormation:hover
+{
+    -fx-background-image: url(../../ressources/images/responsable/formationHover.png);
+}
+
+.bgClub
+{
+    -fx-background-size: 15% ;
+    -fx-background-position: 6%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url(../../ressources/images/responsable/club.png);
+}
+
+.bgClub:hover
+{
+    -fx-background-image: url(../../ressources/images/responsable/clubHover.png);
+}
+
+.bgMessage
+{
+    -fx-background-size: 15% ;
+    -fx-background-position: 6%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url(../../ressources/images/responsable/message.png);
+}
+
+.bgMessage:hover
+{
+    -fx-background-image: url(../../ressources/images/responsable/messageHover.png);
+}
+
+.bgProduit
+{
+    -fx-background-size: 15% ;
+    -fx-background-position: 6%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url(../resources/produit.png);
+}
+
+.bgProduit:hover
+{
+    -fx-background-image: url(../resources/produit.png);
+}
+
+.bgService
+{
+    -fx-background-size: 12% ;
+    -fx-background-position: 8%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url(../resources/service.png);
+}
+
+.bgService:hover
+{
+    -fx-background-image: url(../resources/service.png);
+}
+
+.bgReclamation
+{
+    -fx-background-size: 15% ;
+    -fx-background-position: 6%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url(../resources/reclamation.png);
+}
+.bgReclamation:hover,.bgStade:focused
+{
+    -fx-background-image: url(../resources/reclamation.png);
+}
+.bgForum
+{
+    -fx-background-size: 15% ;
+    -fx-background-position: 6%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url(../resources/forum.png);
+}
+.bgForum:hover
+{
+    -fx-background-image: url(../resources/forum.png);
+}
+
+.bgAchat
+{
+    -fx-background-size: 10% ;
+    -fx-background-position: 8%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url(../resources/chash.png);
+}
+
+.bgAchat:hover
+{
+    -fx-background-image: url(../resources/chash.png);
+}
+
+.mydiv {
+  width:100%;
+  height:100%;
+  color:black;
+  font-weight:bold;
+  animation: myanimation 10s infinite;
+}
+
+@keyframes myanimation {
+  0% {-fx-background-image: url(../resources/Picture2.png);}
+  25%{-fx-background-image: url(../resources/Picture3.png);}
+  50%{-fx-background-image: url(../resources/Picture4.png);}
+  75%{-fx-background-image: url(../resources/chash.png);}
+  100% {-fx-background-image: url(../resources/chash.png);}
+}
+
+.bgCup
+{
+    -fx-background-size: 10% ;
+    -fx-background-position: 8%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url(../../ressources/images/responsable/cup.png);
+}
+.bgCup:hover
+{
+    -fx-background-image: url(../../ressources/images/responsable/cupHover.png);
+}
+
+.bgEvent
+{
+    -fx-background-size: 12% ;
+    -fx-background-position: 8%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url(../resources/event.png);
+}.bgEvent:hover
+{
+    -fx-background-image: url(../resources/event.png);
+}
+
+
+
+.menuBoutons{
+    -fx-background-color: #7cb342;
+    -fx-text-alignment: left;
+   -fx-text-align: left;
+   -fx-cursor : hand;
+}
+.menuBoutons:hover{
+    -fx-background-color: #3e2723;
+}
+.menuBoutons:active{
+    -fx-background-color: #3e2723;
+}
+.menuBoutonsPressed{
+    -fx-background-color: #8d6e63;
+    -fx-text-alignment: left;
+   -fx-text-align: left;
+}
+.backgroundListPane{
+    -fx-background-color: #FFF;
+   
+}
+.titleListPane
+{
+    -fx-background-color: #26778f;
+}
+.godpane
+{
+    
+    -fx-background-image: url(C:/Users/gazzah/Documents/NetBeansProjects/PIPepiniere/src/resources/Picture2.jpg);
+   
+}
+.backGroundPane{
+    -fx-background-color: #144d5e;
+}
+.logo{
+    -fx-background-color: #229abf;
+     -fx-background-image: url(../../ressources/Picture2.jpg);
+    -fx-background-repeat: no-repeat;
+   
+   
+}
+.selectPane
+{
+    -fx-background-color: #229abf;
+     -fx-background-image: url(../../ressources/images/logov2.png);
+         -fx-border-insets: 0;
+         -fx-border-width: 1;
+         -fx-border-style: solid;
+    
+    -fx-background-repeat: no-repeat;
+   
+}
+.imageContainerButton
+{
+    -fx-font-size : 12;
+    -fx-background-color: #FFF;
+    -fx-text-fill : #144d5e;
+    -fx-border-insets: 0;
+         -fx-border-width: 1;
+         -fx-border-style: solid;
+         -fx-border-color: #144d5e;
+}
+.imageContainerButton:hover
+{
+    -fx-background-color: #144d5e;
+    -fx-text-fill : #FFF;
+    -fx-border-insets: 0;
+         -fx-border-width: 1;
+         -fx-border-style: solid;
+         -fx-border-color: #144d5e;
+}
+.corpsPane{
+    -fx-background-color: #dedede;
+    -fx-background-size: 100%;
+}
+.titlePane{
+    -fx-background-color: #FFF;
+}
+.boutonGlissant
+{
+    -fx-background-color: #FFF;
+}
+.boutonGlissantBouton1
+{
+   -fx-background-radius: 15px;
+   -fx-cursor: hand;
+  
+}
+.btn {
+     -fx-alignment : center-left;
+  
+    -fx-background-color: linear-gradient(#54beef, #2ea1d7);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+     
+}
+.btnEnvoyer {
+     -fx-alignment : center;
+  
+    -fx-background-color: linear-gradient(#54beef, #2ea1d7);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+     
+}
+
+.btn:hover,.btnEnvoyer:hover{
+  
+  
+    -fx-background-color: 
+       
+        linear-gradient(#76cef8, #2ea1d7);
+    
+
+
+}
+
+
+.compteContainer
+{
+    -fx-border-color :  rgba(0,0,0,0.3);
+    -fx-background-color: #FFF;
+    -fx-background-size: 100%;
+   
+    -fx-background-position: 50% 0%;
+    -fx-background-repeat:no-repeat;
+    -fx-background-image: url(Images/arbitreAvatar.jpg);
+   
+    
+}
+.Button_supprimer_sujet{
+    -fx-background-color: #7cb342;
+    -fx-text-alignment: left;
+   -fx-text-align: left;
+   -fx-cursor : hand;
+    -fx-background-size: 12% ;
+    -fx-background-position: 8%;
+    -fx-background-repeat: no-repeat;
+   -fx-background-image: url(../resources/Fermer.png);
+}
+.Button_supprimer_sujet:hover{
+    -fx-background-color: #e01212;
+       -fx-background-image: url(../resources/Fermer.png);
+
+}
+.Button_supprimer_sujetPressed{
+    -fx-background-color: #8d6e63;
+    -fx-text-alignment: left;
+   -fx-text-align: left;
+}
+
+
+.Button_modifier_sujet{
+    -fx-background-color: #7cb342;
+    -fx-text-alignment: left;
+   -fx-text-align: left;
+   -fx-cursor : hand;
+    -fx-background-size: 12% ;
+    -fx-background-position: 8%;
+    -fx-background-repeat: no-repeat;
+   -fx-background-image: url(../resources/edit_row.png);
+}
+.Button_modifier_sujet:hover{
+    -fx-background-color: #7cb342;
+       -fx-background-image: url(../resources/edit_row.png);
+
+}
+
+.Button_modifier_sujetPressed{
+    -fx-background-color: #8d6e63;
+    -fx-text-alignment: left;
+   -fx-text-align: left;
+}
+
+
+.Button_voir_stat_sujet{
+    -fx-background-color: #7cb342;
+    -fx-text-alignment: left;
+   -fx-text-align: left;
+   -fx-cursor : hand;
+    -fx-background-size: 12% ;
+    -fx-background-position: 8%;
+    -fx-background-repeat: no-repeat;
+   -fx-background-image: url(../resources/chart.png);
+}
+.Button_voir_stat_sujet:hover{
+    -fx-background-color: darkorange;
+       -fx-background-image: url(../resources/chart.png);
+
+}
+
+.Button_voir_stat_sujetPressed{
+    -fx-background-color: #8d6e63;
+    -fx-text-alignment: left;
+   -fx-text-align: left;
+}

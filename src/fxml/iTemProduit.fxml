@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.Rating?>
+
+<HBox fx:id="Hbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="162.0" prefWidth="1004.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="177.6708984375">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="img" fitHeight="130.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
+      <VBox prefHeight="152.0" prefWidth="495.0">
+         <children>
+            <HBox prefHeight="32.0" prefWidth="523.0">
+               <children>
+                  <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Produit :" wrappingWidth="146.7890625">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtnom" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="375.6708984375">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox prefHeight="33.0" prefWidth="523.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pépinière :" wrappingWidth="147.486328125">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="lblnompep" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: Bold;" text="Text" wrappingWidth="304.6708984375">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin></Text>
+               </children>
+            </HBox>
+            <HBox prefHeight="82.0" prefWidth="349.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Description :" wrappingWidth="133.92919921875">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <TextArea fx:id="txtdesc" editable="false" prefHeight="82.0" prefWidth="359.0" styleClass="text-area" stylesheets="@../css/mainSheet.css" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></TextArea>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="192.0" prefWidth="216.0">
+         <children>
+            <Label fx:id="lblPrix" contentDisplay="CENTER" prefHeight="35.0" prefWidth="210.0" text="Label" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblDispo" contentDisplay="CENTER" prefHeight="36.0" prefWidth="209.0" text="Label" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Rating fx:id="rating" prefHeight="36.0" prefWidth="176.0" />
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="btn_addtofavoris" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/heart.png" />
+                     </image> 
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="btn_addtocart" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/addcart.png" />
+                     </image>
+ 
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fx:id="btn_detailview" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/detail.png" />
+                     </image> 
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets top="10.0" />
+   </padding>
+</HBox>

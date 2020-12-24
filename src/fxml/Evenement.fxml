@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="692.0" prefWidth="1156.0" styleClass="godpane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EvenementController">
+   <children>
+      <AnchorPane prefHeight="692.0" prefWidth="1223.0">
+         <children>
+            <AnchorPane id="ajouterMedecinContainer" fx:id="zone_ajout_eve" layoutX="761.0" layoutY="97.0" prefHeight="563.0" prefWidth="351.0" style="-fx-background-color: #FFF;">
+               <children>
+                  <Pane prefHeight="39.0" prefWidth="350.0" style="-fx-background-color: #568203;">
+                     <children>
+                        <Label fx:id="label_eve" layoutX="103.0" layoutY="7.0" text="Ajouter Evénement" textFill="#181b19">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <TextField fx:id="nom_eve" layoutX="122.0" layoutY="74.0" promptText="Nom" />
+                  <TextField fx:id="lieu_eve" layoutX="122.0" layoutY="179.0" promptText="Lieu" />
+                  <Button fx:id="Button_Valider" layoutX="119.0" layoutY="465.0" mnemonicParsing="false" onAction="#Ajouter_eve" prefHeight="45.0" prefWidth="124.0" styleClass="btnEnvoyer" text="Valider" textAlignment="CENTER" />
+                  <Label layoutX="57.0" layoutY="78.0" prefHeight="17.0" prefWidth="30.0" text="Nom" />
+                  <Label layoutX="59.0" layoutY="127.0" text="Type" />
+                  <Label layoutX="66.0" layoutY="183.0" prefHeight="17.0" prefWidth="30.0" text="Lieu" />
+                  <DatePicker fx:id="date_debut_eve" layoutX="119.0" layoutY="230.0" prefHeight="25.0" prefWidth="174.0" promptText="Date De Début" />
+                  <Label layoutX="11.0" layoutY="234.0" text="Date De Début" />
+                  <Label layoutX="50.0" layoutY="293.0" text="Date Fin" />
+                  <DatePicker fx:id="date_fin_eve" layoutX="120.0" layoutY="289.0" promptText="Date Fin" />
+                  <Label layoutX="36.0" layoutY="368.0" text="Description" />
+                  <TextArea fx:id="description_eve" layoutX="120.0" layoutY="354.0" prefHeight="53.0" prefWidth="200.0" promptText="Description ..." />
+                  <ComboBox fx:id="type_eve" layoutX="119.0" layoutY="123.0" prefWidth="150.0" />
+                  <Button fx:id="ajouter_img" layoutX="122.0" layoutY="429.0" mnemonicParsing="false" onAction="#choose" text="Image" />
+                  <Label layoutX="220.0" layoutY="433.0" text="nombre" />
+                  <TextField fx:id="max" layoutX="275.0" layoutY="429.0" prefHeight="25.0" prefWidth="49.0" />
+                  <AnchorPane fx:id="zone_modifier" layoutX="-1.0" layoutY="-15.0" prefHeight="539.0" prefWidth="350.0" style="-fx-background-color: #FFF;">
+                     <children>
+                        <Label layoutX="66.0" layoutY="77.0" text="Nom" />
+                        <Label layoutX="67.0" layoutY="126.0" text="Type" />
+                        <Label layoutX="14.0" layoutY="236.0" text="Date De Début" />
+                        <Label layoutX="66.0" layoutY="182.0" prefHeight="17.0" prefWidth="84.0" text="Lieu" />
+                        <Label layoutX="47.0" layoutY="293.0" text="Date Fin" />
+                        <Label layoutX="38.0" layoutY="364.0" text="Description" />
+                        <TextField fx:id="nom_mod" layoutX="114.0" layoutY="73.0" />
+                        <ComboBox fx:id="type_mod" layoutX="114.0" layoutY="122.0" prefWidth="150.0" />
+                        <TextField fx:id="lieu_mod" layoutX="115.0" layoutY="178.0" prefHeight="25.0" prefWidth="150.0" />
+                        <DatePicker fx:id="date_debut_mod" layoutX="123.0" layoutY="232.0" />
+                        <DatePicker fx:id="date_fin_mod" layoutX="123.0" layoutY="289.0" />
+                        <TextArea fx:id="description_mod" layoutX="126.0" layoutY="354.0" prefHeight="53.0" prefWidth="191.0" />
+                        <Pane prefHeight="39.0" prefWidth="352.0" style="-fx-background-color: #568203;">
+                           <children>
+                              <Label layoutX="95.0" layoutY="9.0" text="Modifier Evénemet" textFill="#181b19">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Button fx:id="Valider_Mod" layoutX="201.0" layoutY="460.0" mnemonicParsing="false" onAction="#valider_mod" prefHeight="54.0" prefWidth="124.0" text="Valider Mod" />
+                        <Button fx:id="Button_annuler" layoutX="48.0" layoutY="460.0" mnemonicParsing="false" onAction="#Annuler_mod" prefHeight="54.0" prefWidth="124.0" text="Annuler" />
+                        <TextField fx:id="id_mo" layoutX="222.0" layoutY="39.0" prefHeight="17.0" prefWidth="98.0" visible="false" />
+                        <Label layoutX="47.0" layoutY="424.0" text="Nombre" />
+                        <TextField fx:id="maxsm" layoutX="127.0" layoutY="420.0" prefHeight="25.0" prefWidth="61.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <TableView fx:id="table" layoutX="102.0" layoutY="158.0" onMouseClicked="#affphoto" prefHeight="277.0" prefWidth="586.0">
+              <columns>
+                <TableColumn fx:id="nomm" prefWidth="87.0" text="nom_evenement" />
+                <TableColumn fx:id="nom_admin" prefWidth="81.0" text="pseudo_admin" />
+                  <TableColumn fx:id="type" prefWidth="70.0" text="Type" />
+                  <TableColumn fx:id="lieu" prefWidth="62.0" text="Lieu" />
+                  <TableColumn fx:id="date_debut" prefWidth="84.0" text="Date_debut" />
+                  <TableColumn fx:id="date_fin" prefWidth="74.0" text="Date_fin" />
+                  <TableColumn fx:id="description" prefWidth="76.0" text="Description" />
+                  <TableColumn fx:id="id_evenement" prefWidth="32.0" text="id_evenement" visible="false" />
+                  <TableColumn fx:id="maxs" prefWidth="51.0" text="max" />
+              </columns>
+            </TableView>
+            <Pane layoutX="100.0" layoutY="116.0" prefHeight="40.0" prefWidth="589.0" style="-fx-background-color: #568203;">
+               <children>
+                  <Label layoutX="180.0" layoutY="6.0" prefHeight="29.0" prefWidth="199.0" text="Liste des Evénement" textFill="#181b19">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="ButtonSupprimer" layoutX="561.0" layoutY="448.0" mnemonicParsing="false" onAction="#Supprimer_eve" prefHeight="45.0" prefWidth="124.0" text="Supprimer" />
+            <Button fx:id="ButtonModifier" layoutX="404.0" layoutY="449.0" mnemonicParsing="false" onAction="#Modifier_eve" prefHeight="45.0" prefWidth="124.0" text="Modifer" />
+            <TextField fx:id="rech" layoutX="536.0" layoutY="85.0" onKeyPressed="#rechercher" promptText="Search..." />
+            <ComboBox fx:id="comrech" layoutX="338.0" layoutY="86.0" prefWidth="150.0" />
+            <ImageView fx:id="img_view" fitHeight="135.0" fitWidth="197.0" layoutX="400.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true" />
+            <TableView fx:id="table_nom" layoutX="111.0" layoutY="473.0" prefHeight="133.0" prefWidth="150.0">
+               <columns>
+                  <TableColumn fx:id="nom" prefWidth="149.0" text="nom" />
+               </columns>
+            </TableView>
+            <Label layoutX="111.0" layoutY="443.0" prefHeight="27.0" prefWidth="124.0" text="Nombre Participons" textFill="#181b19">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="num" layoutX="254.0" layoutY="448.0" text="0" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="29.0" layoutY="27.0" prefHeight="30.0" prefWidth="292.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #7387A8;" text="Gestion des Evenements" />
+      <Separator layoutX="13.0" layoutY="65.0" prefHeight="4.0" prefWidth="1213.0" />
+   </children>
+</AnchorPane>

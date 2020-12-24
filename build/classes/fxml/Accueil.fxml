@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="689.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccueilController">
+   <children>
+      <AnchorPane fx:id="zone_acceuil_prods" layoutX="118.0" layoutY="-4.0" prefHeight="638.0" prefWidth="1087.0">
+         <children>
+            <ScrollPane layoutX="10.0" layoutY="360.0" prefHeight="223.0" prefWidth="1062.0">
+               <content>
+                  <HBox fx:id="hbprom" prefHeight="210.0" prefWidth="699.0" />
+               </content>
+            </ScrollPane>
+            <Label fx:id="open_promotion" layoutX="480.0" layoutY="293.0" onMouseClicked="#show_promotion" prefHeight="70.0" prefWidth="124.0" text="Promotions">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ScrollPane layoutX="10.0" layoutY="67.0" prefHeight="205.0" prefWidth="1062.0">
+               <content>
+                  <HBox fx:id="hbnv" prefHeight="176.0" prefWidth="699.0" />
+               </content>
+            </ScrollPane>
+            <Label fx:id="open_promotion1" layoutX="450.0" layoutY="6.0" onMouseClicked="#show_promotion" prefHeight="70.0" prefWidth="202.0" text="Nouveaux produits">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

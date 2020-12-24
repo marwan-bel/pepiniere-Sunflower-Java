@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox fx:id="Hbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="162.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/">
+   <children>
+      <VBox prefHeight="152.0" prefWidth="595.0">
+         <children>
+            <JFXTextArea fx:id="txt_AddComment" promptText="Ecrivez votre commentaire ici!" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextArea>
+            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="382.0">
+               <children>
+                  <Text fx:id="txt_nom_client" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="nom client" wrappingWidth="113.7890625">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="btn_jaime" fitHeight="41.0" fitWidth="75.0"  pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/like.png" />
+                     </image>
+                    
+                  </ImageView>
+                  <Text fx:id="txt_jaime" strokeType="OUTSIDE" strokeWidth="0.0" text="J'aime" wrappingWidth="113.92919921875">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     
+                  </Text>
+                  <ImageView fx:id="btn_signal" fitHeight="48.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/signaler.png" />
+                     </image>
+                     
+                  </ImageView>
+                  <Text fx:id="txt_signal" strokeType="OUTSIDE" strokeWidth="0.0" text="Signaler" wrappingWidth="113.92919921875">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     
+                  </Text>
+                  <Text fx:id="txt_date" strokeType="OUTSIDE" strokeWidth="0.0" text="date" wrappingWidth="113.92919921875">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="152.0" prefWidth="64.0" spacing="20.0">
+         <children>
+            <ImageView fx:id="btn_deleteComment" fitHeight="51.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/delcomment.png" />
+               </image>
+            </ImageView>
+            
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </children>
+   <padding>
+      <Insets top="10.0" />
+   </padding>
+</HBox>

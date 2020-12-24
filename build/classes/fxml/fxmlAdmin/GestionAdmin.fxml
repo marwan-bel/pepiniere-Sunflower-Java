@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Anchorgestadmin" prefHeight="633.0" prefWidth="773.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.fxmlAdmin.GestionAdminController">
+   <children>
+      <HBox layoutX="25.0" layoutY="484.0" prefHeight="100.0" prefWidth="768.0" spacing="175.0">
+         <children>
+            <JFXButton fx:id="btn_addAmin" onMouseClicked="#addAdmin" prefHeight="44.0" prefWidth="121.0" style="-fx-background-color: green;" text="Ajouter" textFill="WHITE" />
+            <JFXButton fx:id="btn_editAdmin" onMouseClicked="#editAdmin" prefHeight="44.0" prefWidth="121.0" style="-fx-background-color: blue;" text="Modifier" textFill="WHITE" />
+            <JFXButton fx:id="btn_deleteAdmin" onMouseClicked="#deleteAdmin" prefHeight="44.0" prefWidth="121.0" style="-fx-background-color: red;" text="Supprimer" textFill="WHITE" />
+         </children>
+      </HBox>
+      <TableView fx:id="tableViewAdmin" layoutX="112.0" layoutY="68.0" onMouseClicked="#ShowOnClick" prefHeight="200.0" prefWidth="539.0">
+         <columns>
+            <TableColumn fx:id="id_admin" minWidth="0.0" prefWidth="0.0" text="ID" />
+            <TableColumn fx:id="pseudo" prefWidth="100.0" text="Pseudo" />
+            <TableColumn fx:id="nom" minWidth="0.0" prefWidth="72.0" text="Nom" />
+            <TableColumn fx:id="prenom" prefWidth="77.0" text="Prenom" />
+            <TableColumn fx:id="adresse" prefWidth="103.0" text="Adresse" />
+            <TableColumn fx:id="email" prefWidth="127.0" text="E-mail" />
+            <TableColumn fx:id="role_admin" prefWidth="58.0" text="Role" />
+         </columns>
+      </TableView>
+      <VBox layoutX="45.0" layoutY="291.0" prefHeight="138.0" prefWidth="252.0" spacing="20.0">
+         <children>
+            <JFXTextField fx:id="txt_login" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Pseudo">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="txt_password" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Mot de passe" />
+            <JFXTextField fx:id="txt_adress" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Adresse" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="323.0" layoutY="291.0" prefHeight="138.0" prefWidth="252.0" spacing="20.0">
+         <children>
+            <JFXTextField fx:id="txt_email" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Email" />
+            <JFXTextField fx:id="txt_prenom" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Prénom" />
+            <JFXTextField fx:id="txt_nom" labelFloat="true" maxWidth="252.0" minWidth="252.0" prefHeight="31.0" prefWidth="252.0" promptText="Nom" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <TextField fx:id="chercher" layoutX="669.0" layoutY="19.0" onKeyPressed="#rechercheAdmin" promptText="Rechercher" />
+      <Label fx:id="lbl_id" layoutX="56.0" layoutY="306.0" prefHeight="17.0" prefWidth="0.0" />
+      <ImageView fitHeight="40.0" fitWidth="27.0" layoutX="642.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/recherche.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="31.0" layoutY="11.0" prefHeight="30.0" prefWidth="292.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #7387A8;" text="Gestion des Admins" />
+      <Separator layoutX="15.0" layoutY="49.0" prefHeight="4.0" prefWidth="1213.0" />
+   </children>
+</AnchorPane>

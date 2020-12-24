@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ServiceDetailsController">
+    <children>
+      <Separator layoutX="108.0" layoutY="184.0" prefHeight="4.0" prefWidth="244.0" />
+      <Label fx:id="lblnom" layoutX="150.0" layoutY="127.0" prefHeight="17.0" prefWidth="189.0" style="-fx-text-fill: #162E3B; -fx-font-size: 16; -fx-font-weight: bold; -fx-alignment: center;" text="Dan Mlayah" />
+      <Label fx:id="lblType" layoutX="143.0" layoutY="153.0" prefHeight="17.0" prefWidth="189.0" style="-fx-text-fill: #A6A6A6; -fx-font-size: 14; -fx-alignment: center;" text="Software Developer" />
+      <Separator layoutX="107.0" layoutY="222.0" prefHeight="4.0" prefWidth="244.0" />
+      <Separator layoutX="108.0" layoutY="305.0" prefHeight="4.0" prefWidth="244.0" />
+      <ImageView fx:id="img" fitHeight="119.0" fitWidth="125.0" layoutX="188.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/profile1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="108.0" layoutY="196.0" prefHeight="17.0" prefWidth="94.0" text="Region">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="108.0" layoutY="235.0" prefHeight="17.0" prefWidth="94.0" text="Description">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRegion" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="181.0" layoutY="196.0" prefHeight="20.0" prefWidth="169.0" text="1,344" textFill="#918dbc">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescription" alignment="TOP_RIGHT" layoutX="174.0" layoutY="235.0" prefHeight="70.0" prefWidth="176.0" text="543" textAlignment="JUSTIFY" textFill="#918dbc">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="144.0" layoutY="480.0" onAction="#AddRate" prefHeight="30.0" prefWidth="176.0" style="-fx-background-color: #3C8DBC;" text="Rate" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="15.0" />
+         </font>
+      </JFXButton>
+      <Rating fx:id="rating" layoutX="142.0" layoutY="424.0" />
+      <JFXTextField fx:id="txtComment" layoutX="104.0" layoutY="385.0" maxWidth="251.0" minWidth="220.0" prefHeight="37.0" prefWidth="251.0" promptText="your Comment" />
+      <Separator layoutX="108.0" layoutY="351.0" prefHeight="4.0" prefWidth="244.0" />
+      <Label layoutX="109.0" layoutY="325.0" prefHeight="17.0" prefWidth="94.0" text="Prix">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPrice" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="182.0" layoutY="325.0" prefHeight="20.0" prefWidth="169.0" text="1,344" textFill="#918dbc">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

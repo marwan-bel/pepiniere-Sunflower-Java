@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DetailedController">
+    <children>
+      <Label alignment="CENTER" layoutX="113.0" layoutY="14.0" prefHeight="102.0" prefWidth="568.0" text=" Reclamation" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="148.0" prefHeight="27.0" prefWidth="176.0" text="Nom Client :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="195.0" prefHeight="27.0" prefWidth="176.0" text="Titre Reclamation :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="242.0" prefHeight="27.0" prefWidth="176.0" text="Nom Pepinière :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="288.0" prefHeight="27.0" prefWidth="133.0" text="Tél Privé :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ms" layoutX="100.0" layoutY="375.0" prefHeight="174.0" prefWidth="635.0" />
+      <Label fx:id="nc" layoutX="384.0" layoutY="148.0" prefHeight="27.0" prefWidth="236.0" text="Label" />
+      <Label fx:id="tr" layoutX="384.0" layoutY="192.0" prefHeight="27.0" prefWidth="299.0" text="Label" />
+      <Label fx:id="np" layoutX="384.0" layoutY="235.0" prefHeight="27.0" prefWidth="299.0" text="Label" />
+      <Label fx:id="tp" layoutX="382.0" layoutY="288.0" prefHeight="27.0" prefWidth="299.0" text="Label" />
+      <Button fx:id="btn88" layoutX="703.0" layoutY="720.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="81.0" text="Back" />
+   </children>
+</AnchorPane>

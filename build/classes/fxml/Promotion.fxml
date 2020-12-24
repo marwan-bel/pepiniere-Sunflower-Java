@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="676.0" prefWidth="1190.0" styleClass="godpane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PromotionController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane id="ajouterMedecinContainer" fx:id="zone_ajout_eve" layoutX="818.0" layoutY="71.0" prefHeight="539.0" prefWidth="350.0" style="-fx-background-color: #FFF;">
+               <children>
+                  <Pane prefHeight="39.0" prefWidth="350.0" style="-fx-background-color: #568203;">
+                     <children>
+                        <Label fx:id="label_pro" layoutX="103.0" layoutY="7.0" text="Ajouter Promotion" textFill="#181b19">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <TextField fx:id="prix_hab_pro" editable="false" layoutX="122.0" layoutY="199.0" promptText="Prix_hab" />
+                  <Button fx:id="Button_Valider" layoutX="119.0" layoutY="465.0" mnemonicParsing="false" onAction="#Ajouter_pro" prefHeight="45.0" prefWidth="124.0" styleClass="btnEnvoyer" text="Valider" textAlignment="CENTER" />
+                  <Label layoutX="51.0" layoutY="161.0" text="Nom" />
+                  <Label layoutX="37.0" layoutY="349.0" text="Date Fin" />
+                  <DatePicker fx:id="date_fin_pro" layoutX="119.0" layoutY="337.0" promptText="Date Fin" />
+                  <Label layoutX="34.0" layoutY="403.0" text="Description" />
+                  <TextArea fx:id="description_pro" layoutX="119.0" layoutY="385.0" prefHeight="53.0" prefWidth="200.0" promptText="Description ..." />
+                  <ImageView fx:id="img_view" fitHeight="54.0" fitWidth="72.0" layoutX="253.0" layoutY="464.0" pickOnBounds="true" preserveRatio="true" />
+                  <TextField fx:id="nom_pro" layoutX="122.0" layoutY="157.0" promptText="Nom_pro" />
+                  <DatePicker fx:id="date_debut_pro" layoutX="120.0" layoutY="288.0" prefHeight="25.0" prefWidth="174.0" promptText="Date De Début" />
+                  <Label layoutX="14.0" layoutY="292.0" text="Date De Début" />
+                  <Label layoutX="34.0" layoutY="203.0" prefHeight="17.0" prefWidth="61.0" text="Prix_hab" />
+                  <TextField fx:id="pourcentage_pro" layoutX="122.0" layoutY="244.0" promptText="Pourcentage" />
+                  <Label layoutX="15.0" layoutY="83.0" prefHeight="17.0" prefWidth="98.0" text="Nom produit" />
+                  <Label layoutX="31.0" layoutY="248.0" text="Pourcentage" />
+                  <Line endX="198.0" layoutX="152.0" layoutY="133.0" startX="-152.0" />
+                  <Label fx:id="nom_produit" layoutX="139.0" layoutY="83.0" prefHeight="17.0" prefWidth="124.0" />
+                  <Label fx:id="idpr" layoutX="173.0" layoutY="59.0" visible="false" />
+                  <AnchorPane fx:id="zone_modifier" layoutX="-1.0" prefHeight="539.0" prefWidth="350.0" style="-fx-background-color: #FFF;">
+                     <children>
+                        <Label layoutX="25.0" layoutY="68.0" text="Nom produit" />
+                        <Label layoutX="56.0" layoutY="135.0" text="Nom" />
+                        <Label layoutX="20.0" layoutY="261.0" text="Date De Début" />
+                        <Label layoutX="49.0" layoutY="176.0" prefHeight="17.0" prefWidth="84.0" text="Prix_hab" />
+                        <Label layoutX="47.0" layoutY="306.0" text="Date Fin" />
+                        <Label layoutX="38.0" layoutY="364.0" text="Description" />
+                        <TextField fx:id="pourcentage_mod" layoutX="126.0" layoutY="211.0" prefHeight="25.0" prefWidth="150.0" promptText="Pourcentage" />
+                        <DatePicker fx:id="date_debut_mod" layoutX="123.0" layoutY="257.0" promptText="Date De Début" />
+                        <DatePicker fx:id="date_fin_mod" layoutX="123.0" layoutY="302.0" promptText="Date Fin" />
+                        <TextArea fx:id="description_mod" layoutX="126.0" layoutY="354.0" prefHeight="53.0" prefWidth="191.0" promptText="Description ..." />
+                        <Pane prefHeight="39.0" prefWidth="352.0" style="-fx-background-color: #568203;">
+                           <children>
+                              <Label layoutX="95.0" layoutY="9.0" text="Modifier Promotion" textFill="#181b19">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Button fx:id="Valider_Mod" layoutX="201.0" layoutY="460.0" mnemonicParsing="false" onAction="#valider_mod" prefHeight="54.0" prefWidth="124.0" text="Valider Mod" />
+                        <Button fx:id="Button_annuler" layoutX="48.0" layoutY="460.0" mnemonicParsing="false" onAction="#Annuler_mod" prefHeight="54.0" prefWidth="124.0" text="Annuler" />
+                        <TextField fx:id="id_mo" layoutX="222.0" layoutY="39.0" prefHeight="17.0" prefWidth="98.0" visible="false" />
+                        <Label layoutX="35.0" layoutY="215.0" text="Pourcentage" />
+                        <TextField fx:id="prix_hab_mod" editable="false" layoutX="127.0" layoutY="172.0" promptText="Prix_hab" />
+                        <TextField fx:id="nom_mod" layoutX="127.0" layoutY="131.0" promptText="Nom_pro" />
+                        <Line endX="225.0" layoutX="127.0" layoutY="113.0" startX="-127.0" />
+                        <Label fx:id="nom_produit_mod" layoutX="127.0" layoutY="68.0" prefHeight="17.0" prefWidth="98.0" />
+                        <Label fx:id="idm" layoutX="148.0" layoutY="43.0" visible="false" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <TableView fx:id="table" layoutX="124.0" layoutY="364.0" onMouseClicked="#aaa" prefHeight="233.0" prefWidth="658.0">
+              <columns>
+                <TableColumn fx:id="nommm" prefWidth="96.0" text="nom_promotion" />
+                  <TableColumn fx:id="prix_habb" prefWidth="57.0" text="prix_hab" />
+                  <TableColumn fx:id="prix_promoo" prefWidth="73.0" text="prix_promo" />
+                  <TableColumn fx:id="pourcentagee" prefWidth="78.0" text="pourcentage" />
+                  <TableColumn fx:id="date_debutt" prefWidth="94.0" text="date_debut" />
+                  <TableColumn fx:id="date_finn" prefWidth="75.0" text="date_fin" />
+                  <TableColumn fx:id="descriptionn" prefWidth="101.0" text="description" />
+                  <TableColumn fx:id="nom_produitt" prefWidth="82.0" text="nom_produit" />
+                  <TableColumn fx:id="id_promotionn" prefWidth="48.0" text="id_promotion" visible="false" />
+              </columns>
+            </TableView>
+            <Pane layoutX="124.0" layoutY="323.0" prefHeight="40.0" prefWidth="657.0" style="-fx-background-color: #568203;">
+               <children>
+                  <Label layoutX="240.0" layoutY="6.0" prefHeight="29.0" prefWidth="199.0" text="Liste des Promotions" textFill="#181b19">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="ButtonSupprimer" layoutX="656.0" layoutY="605.0" mnemonicParsing="false" onAction="#Supprimer_pro" prefHeight="45.0" prefWidth="124.0" text="Supprimer" />
+            <Button fx:id="ButtonModifier" layoutX="491.0" layoutY="606.0" mnemonicParsing="false" onAction="#Modifier_pro" prefHeight="45.0" prefWidth="124.0" text="Modifer" />
+            <TextField fx:id="rech" layoutX="623.0" layoutY="277.0" onKeyPressed="#rechercher" promptText="Search..." />
+            <ComboBox fx:id="comrech" layoutX="455.0" layoutY="277.0" prefWidth="150.0" />
+            <Label fx:id="label2" layoutX="138.0" layoutY="282.0" text="nom produit">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font></Label>
+            <TableView fx:id="table2" layoutX="126.0" layoutY="123.0" onMouseClicked="#aa" prefHeight="144.0" prefWidth="658.0">
+               <columns>
+                  <TableColumn fx:id="nom_categorieee" prefWidth="107.00003051757812" text="nom_categorie" />
+                  <TableColumn fx:id="typeee" prefWidth="79.0" text="type" />
+                  <TableColumn fx:id="prixxx" prefWidth="86.0" text="prix" />
+                  <TableColumn fx:id="quantiteee" prefWidth="104.0" text="quantite" />
+                  <TableColumn fx:id="descriptionnn" prefWidth="136.0" text="description" />
+                  <TableColumn fx:id="id_produittt" minWidth="0.0" prefWidth="61.0" text="id_produit" visible="false" />
+                  <TableColumn fx:id="nom_produittt" prefWidth="144.0" text="nom_produit" />
+               </columns>
+            </TableView>
+            <Pane layoutX="130.0" layoutY="73.0" prefHeight="49.0" prefWidth="657.0" style="-fx-background-color: #568203;">
+               <children>
+                  <Label layoutX="234.0" layoutY="9.0" text="Liste des Produits" textFill="#181b19">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Label layoutX="23.0" layoutY="15.0" prefHeight="30.0" prefWidth="292.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #7387A8;" text="Gestion des Promotions" />
+      <Separator layoutX="7.0" layoutY="53.0" prefHeight="4.0" prefWidth="1213.0" />
+   </children>
+</AnchorPane>

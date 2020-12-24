@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="713.0" prefWidth="1219.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Agent.AddServiceController">
+   <children>
+      <Label layoutX="19.0" layoutY="17.0" prefHeight="30.0" prefWidth="392.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #7387A8;" text="Add Service" />
+      <Separator layoutX="3.0" layoutY="55.0" prefHeight="4.0" prefWidth="1213.0" />
+      <HBox layoutX="57.0" layoutY="217.0" spacing="10.0" />
+      <JFXTextField fx:id="ServiceName" labelFloat="true" layoutX="789.0" layoutY="101.0" maxWidth="370.0" minWidth="370.0" prefHeight="31.0" prefWidth="370.0" promptText="Serice name" />
+      <Label layoutX="916.0" layoutY="494.0" prefHeight="30.0" prefWidth="150.0" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #7387A8;" text="Add image" />
+      <JFXButton fx:id="ServiceImage" buttonType="RAISED" layoutX="858.0" layoutY="524.0" onAction="#uploadPhoto" prefHeight="48.0" prefWidth="249.0" style="-fx-background-color: #00C0EF;" text="add image" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="Serviceemail" labelFloat="true" layoutX="798.0" layoutY="199.0" maxWidth="370.0" minWidth="370.0" prefHeight="31.0" prefWidth="370.0" promptText="Email" />
+      <JFXTextField fx:id="Serviceprice" labelFloat="true" layoutX="798.0" layoutY="152.0" maxWidth="370.0" minWidth="370.0" prefHeight="31.0" prefWidth="370.0" promptText="Price in DT" />
+      <JFXButton fx:id="addService" buttonType="RAISED" layoutX="858.0" layoutY="616.0" onAction="#SAjouter" prefHeight="48.0" prefWidth="249.0" style="-fx-background-color: #00C0EF;" text="Add Service" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextArea fx:id="servicedescrip" layoutX="800.0" layoutY="255.0" maxWidth="430.0" minWidth="376.0" prefHeight="63.0" prefWidth="376.0" promptText="description" />
+      <ImageView fx:id="simageview" fitHeight="150.0" fitWidth="200.0" layoutX="858.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXTabPane layoutX="29.0" layoutY="121.0" prefHeight="561.0" prefWidth="696.0">
+         <tabs>
+            <Tab text="disponbilite ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="696.0" style="-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-color: white;">
+                     <children>
+                        <GridPane layoutX="82.0" layoutY="56.0" prefHeight="415.0" prefWidth="518.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="87.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="111.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="98.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="90.0" minHeight="0.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="230.0" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #7387A8;" GridPane.rowIndex="1" />
+                              <Label prefHeight="27.0" prefWidth="230.0" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #7387A8;" text="Check Boxes" />
+                              <JFXRadioButton id="txt" fx:id="Daily" text="Daily" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="bb" />
+                                 </toggleGroup>
+                              </JFXRadioButton>
+                              <JFXRadioButton id="txt" fx:id="Monthly" text="Monthly" toggleGroup="$bb" GridPane.columnIndex="1" />
+                              <Label prefHeight="27.0" prefWidth="230.0" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #7387A8;" text="Choose your region" GridPane.rowIndex="3" />
+                              <JFXComboBox fx:id="Servicesatet" prefHeight="31.0" prefWidth="235.0" promptText="State" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <JFXComboBox fx:id="ServiceCity" prefHeight="31.0" prefWidth="235.0" promptText="City" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label prefHeight="27.0" prefWidth="230.0" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #7387A8;" text="Choose service type" GridPane.rowIndex="5" />
+                              <JFXComboBox fx:id="servicetype" prefHeight="31.0" prefWidth="224.0" promptText="type of service" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <JFXRadioButton fx:id="Weekly" text="Weekly" toggleGroup="$bb" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1280.0" styleClass="godpane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Event.AcceuilEvenementController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="img_view" fitHeight="135.0" fitWidth="197.0" layoutX="406.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true" />
+            <ScrollPane layoutX="242.0" layoutY="76.0" prefHeight="572.0" prefWidth="741.0">
+               <content>
+                  <VBox fx:id="vbox" prefHeight="76.0" prefWidth="728.0">
+                     <children>
+                        <HBox fx:id="hbox" prefHeight="120.0" prefWidth="835.0" visible="false">
+                           <children>
+                              <ImageView fx:id="img" fitHeight="76.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
+                                 <effect>
+                                    <Bloom />
+                                 </effect>
+                              </ImageView>
+                              <VBox fx:id="vbox1" prefHeight="76.0" prefWidth="163.0">
+                                 <children>
+                                    <Label fx:id="nom_eve" prefHeight="38.0" prefWidth="152.0" text="nom_eve">
+                                       <effect>
+                                          <Bloom />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="pseudo_admin" prefHeight="30.0" prefWidth="159.0" text="pseudo_admin" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="vbox2" prefHeight="76.0" prefWidth="157.0" visible="false">
+                                 <children>
+                                    <Label fx:id="type" prefHeight="40.0" prefWidth="148.0" text="type" />
+                                    <Label fx:id="lieu" prefHeight="37.0" prefWidth="147.0" text="lieu" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="vbox3" prefHeight="76.0" prefWidth="187.0">
+                                 <children>
+                                    <Label fx:id="date_debut" prefHeight="38.0" prefWidth="175.0" text="date_debut" />
+                                    <Label fx:id="date_fin" prefHeight="38.0" prefWidth="179.0" text="date_fin" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="vbox4" prefHeight="76.0" prefWidth="205.0">
+                                 <children>
+                                    <Label fx:id="description" prefHeight="68.0" prefWidth="195.0" text="description" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <Label layoutX="81.0" layoutY="132.0" text="Filtrer par:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <VBox layoutX="67.0" layoutY="232.0" prefHeight="209.0" prefWidth="166.0">
+               <children>
+                  <TitledPane animated="false" prefHeight="103.0" prefWidth="166.0" text="Type Evenement">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="84.0" prefWidth="164.0">
+                           <children>
+                              <VBox layoutX="1.0" layoutY="10.0" prefHeight="66.0" prefWidth="166.0">
+                                 <children>
+                                    <RadioButton fx:id="btn_animation" mnemonicParsing="false" text="animation" />
+                                    <RadioButton fx:id="btn_competition" mnemonicParsing="false" text="Compétition" />
+                                    <RadioButton fx:id="btn_visite" mnemonicParsing="false" text="Visite Guidé" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane animated="false" prefHeight="112.0" prefWidth="166.0" text="Disponibilité" visible="false">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="59.0" prefWidth="164.0">
+                           <children>
+                              <VBox layoutX="4.0" layoutY="7.0" prefHeight="60.0" prefWidth="157.0">
+                                 <children>
+                                    <RadioButton fx:id="btn_dispo" mnemonicParsing="false" text="disponible" />
+                                    <RadioButton fx:id="btn_non" mnemonicParsing="false" text="non disponible" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+               </children>
+            </VBox>
+            <Button fx:id="supprimer_filtre" layoutX="74.0" layoutY="174.0" mnemonicParsing="false" text="Supprimer filtre" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="35.0" layoutY="15.0" prefHeight="30.0" prefWidth="292.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #7387A8;" text="Liste des Evenements" />
+      <Separator layoutX="19.0" layoutY="53.0" prefHeight="4.0" prefWidth="1213.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+    <children>
+      <ImageView fitHeight="781.0" fitWidth="1364.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resources/backgrd.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="inscrire" layoutX="596.0" layoutY="101.0" prefHeight="566.0" prefWidth="761.0" visible="false">
+         <children>
+            <Button layoutX="190.0" layoutY="535.0" mnemonicParsing="false" onMouseClicked="#inscritClient" prefHeight="31.0" prefWidth="158.0" styleClass="imageContainerButton" text="Inscrire">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Label layoutX="55.0" layoutY="4.0" text="Formulaire d'inscription Client" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dateClient" layoutX="272.0" layoutY="452.0" promptText="Date de naissance" />
+            <VBox layoutX="276.0" layoutY="62.0" prefHeight="418.0" prefWidth="478.0" spacing="15.0">
+               <children>
+                  <TextField fx:id="nomClient" prefHeight="31.0" prefWidth="375.0" promptText="Entrez votre Nom(Obligatoire)" styleClass="inputNormal">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font></TextField>
+                  <TextField fx:id="prenomClient" prefHeight="31.0" prefWidth="375.0" promptText="Entrez votre Prenom(Obligatoire)" styleClass="inputNormal">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font></TextField>
+                  <TextField fx:id="mailClient" prefHeight="31.0" prefWidth="375.0" promptText="Entrez votre E-Mail(Obligatoire)" styleClass="inputNormal">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font></TextField>
+                  <PasswordField fx:id="passwdClient" prefHeight="33.0" prefWidth="375.0" promptText="Entrez une mot de passe(Obligatoire)" styleClass="inputNormal">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font></PasswordField>
+                  <TextField fx:id="adressClient" prefHeight="31.0" prefWidth="375.0" promptText="Entrez votre adresse(facultatif)" styleClass="inputNormal">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font></TextField>
+                  <TextField fx:id="telClient" prefHeight="31.0" prefWidth="375.0" promptText="Entrez votre numéro du téléphone(facultatif)" styleClass="inputNormal">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font></TextField>
+               </children>
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="69.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="320.0" prefWidth="251.0" spacing="30.0">
+               <children>
+                  <Label text="Nom:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Prenom:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="E-mail:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Mot de passe:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Adresse:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Numéro de téléphone:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <Line endX="-65.33331298828125" endY="25.0" layoutX="87.0" layoutY="-10.0" startX="-65.33331298828125" startY="577.3333129882812" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="retour" layoutX="1222.0" layoutY="7.0" onMouseClicked="#RetourAction" prefHeight="86.0" prefWidth="130.0" visible="false">
+         <children>
+            <ImageView fitHeight="86.0" fitWidth="103.0" layoutX="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/ret.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+     
+                  <AnchorPane fx:id="agent" layoutX="580.0" layoutY="90.0" prefHeight="622.0" prefWidth="766.0" visible="false">
+         <children>
+            <Button layoutX="176.0" layoutY="578.0" mnemonicParsing="false" onMouseClicked="#inscritAgent" prefHeight="31.0" prefWidth="158.0" styleClass="imageContainerButton" text="Inscrire">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <DatePicker fx:id="dateagent" layoutX="299.0" layoutY="533.0" promptText="Date de Naissaince" />
+            <Label layoutX="47.0" layoutY="524.0" text="SEXE :" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="b" layoutX="137.0" layoutY="533.0" prefHeight="25.0" prefWidth="97.0" promptText="Choisir" />
+            <VBox layoutX="288.0" layoutY="43.0" prefHeight="477.0" prefWidth="476.0" spacing="15.0">
+               <children>
+                  <TextField fx:id="nomagent" prefHeight="31.0" prefWidth="375.0" promptText="Entrez votre Nom" styleClass="inputNormal">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="prenomagent" prefHeight="31.0" prefWidth="375.0" promptText="Entrez votre Prenom" styleClass="inputNormal">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="mailagent" prefHeight="31.0" prefWidth="375.0" promptText="Entrez votre E-Mail" styleClass="inputNormal">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="cinagent" prefHeight="31.0" prefWidth="375.0" promptText="Entrez votre CIN" styleClass="inputNormal">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="nompepiniere" prefHeight="31.0" prefWidth="375.0" promptText="Entrez le nom de votre Pépiniére" styleClass="inputNormal">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="telagent" prefHeight="31.0" prefWidth="375.0" promptText="Entrez votre numéro du téléphone" styleClass="inputNormal">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="passwdagent" prefHeight="33.0" prefWidth="375.0" promptText="Entrez une mot de passe" styleClass="inputNormal">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </PasswordField>
+                  <TextField fx:id="adressagent" prefHeight="31.0" prefWidth="375.0" promptText="Entrez l'adresse de votre Pépiniére" styleClass="inputNormal">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <Label layoutX="83.0" layoutY="-41.0" text="Formulaire d'inscription&#10; Agent Pépiniére" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER_LEFT" layoutX="41.0" layoutY="51.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="402.0" prefWidth="251.0" spacing="30.0">
+               <children>
+                  <Label text="Nom:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Prenom:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="E-mail:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="CIN:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Nom du Pepiniere:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Numéro de téléphone:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Mot de passe:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Adresse du pepiniere:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <Line endX="-65.33331298828125" endY="-14.666664123535156" layoutX="80.0" layoutY="26.0" startX="-65.33331298828125" startY="577.3333129882812" />
+           
+                        
+
+                     </children>
+      </AnchorPane>
+      <AnchorPane fx:id="espaceAdmin" focusTraversable="true" layoutX="54.0" layoutY="270.0" maxHeight="300.0" maxWidth="458.0" minHeight="300.0" prefHeight="300.0" prefWidth="458.0" visible="false">
+         <children>
+            <TextField fx:id="id2" layoutX="78.0" layoutY="86.0" prefHeight="31.0" prefWidth="375.0" promptText="Entrez votre ID" styleClass="inputNormal">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwd2" layoutX="79.0" layoutY="146.0" prefHeight="33.0" prefWidth="375.0" promptText="Entrez votre mot de passe" styleClass="inputNormal">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </PasswordField>
+            <Button layoutX="79.0" layoutY="222.0" mnemonicParsing="false" onMouseClicked="#AdminConnAction" prefHeight="31.0" prefWidth="158.0" styleClass="imageContainerButton" text="Valider">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Label layoutX="21.0" layoutY="1.0" text="Connection" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="espace" layoutX="274.0" layoutY="55.0" prefHeight="649.0" prefWidth="873.0">
+         <children>
+            <AnchorPane fx:id="epepiniere" layoutX="582.0" layoutY="6.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <JFXButton layoutX="-6.0" layoutY="132.0" onMouseClicked="#AgentAction" prefHeight="65.0" prefWidth="284.0" text="Espace Pepiniere" textFill="#8c8c8c">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="62.0" onMouseClicked="#AgentAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/agent.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="eclient" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="43.0" onMouseClicked="#ClientAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/client.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <JFXButton layoutX="3.0" layoutY="139.0" onMouseClicked="#ClientAction" prefHeight="65.0" prefWidth="233.0" text="Espace Client" textFill="#8c8c8c">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Label id="Copyright" layoutX="60.0" layoutY="676.0" text="2019 Copyright" textFill="#3c3c3c" />
+      <Label id="Developped By" layoutX="1190.0" layoutY="671.0" text="Developped by TheSquad" textFill="#3c3c3c" />
+      <Pane layoutX="15.0" layoutY="23.0" prefHeight="108.0" prefWidth="165.0" style="-fx-background-color: #ffffff00;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="188.0" layoutX="-17.0" layoutY="-17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/newlogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

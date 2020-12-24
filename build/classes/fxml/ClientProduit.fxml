@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientProduitController">
+   <children>
+      <Label layoutX="19.0" layoutY="17.0" prefHeight="30.0" prefWidth="292.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #7387A8;" text="List des produits" />
+      <Separator layoutX="3.0" layoutY="55.0" prefHeight="4.0" prefWidth="1213.0" />
+      <ListView fx:id="listViewProduit" layoutX="65.0" layoutY="128.0" prefHeight="562.0" prefWidth="1088.0" />
+      <JFXTabPane layoutX="14.0" layoutY="67.0" prefHeight="165.0" prefWidth="317.0" rotateGraphic="true" stylesheets="@../css/mainSheet.css">
+         <tabs>
+            <Tab onSelectionChanged="#del_all_filters" text="X" />
+            <Tab text="Plantes">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="126.0" prefWidth="317.0">
+                     <children>
+                        <VBox prefHeight="135.0" prefWidth="202.0" spacing="10.0">
+                           <children>
+                              <RadioButton fx:id="btn_arbres" mnemonicParsing="false" text="Arbres et Arbustes" textFill="#623dc9">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton fx:id="btn_fruit" mnemonicParsing="false" text="Plantes fruitiers" textFill="#623dc9">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton fx:id="btn_arbustes" mnemonicParsing="false" text="Plantes de decoration" textFill="#623dc9">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Equipement">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="128.0" prefWidth="317.0" spacing="10.0">
+                           <children>
+                              <RadioButton fx:id="btn_arr" mnemonicParsing="false" text="Outils de jardinage" textFill="#623dc9">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton fx:id="btn_net" mnemonicParsing="false" prefHeight="21.0" prefWidth="247.0" text="Equipements darrosage" textFill="#623dc9">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton fx:id="btn_plant" mnemonicParsing="false" text="Equipements de decoration" textFill="#623dc9">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Engrais">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="124.0" prefWidth="317.0" spacing="10.0">
+                           <children>
+                              <RadioButton fx:id="btn_org" mnemonicParsing="false" prefHeight="21.0" prefWidth="238.0" text="Engrais organiques" textFill="#623dc9">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton fx:id="btn_min" mnemonicParsing="false" prefHeight="21.0" prefWidth="222.0" text="Engrais mineraux" textFill="#623dc9">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <opaqueInsets>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </opaqueInsets>
+      </JFXTabPane>
+      <Label layoutX="477.0" layoutY="59.0" onMouseClicked="#tous_les_prods" prefHeight="54.0" prefWidth="303.0" text="Tous les produits" textFill="#7c0303">
+         <font>
+            <Font name="System Bold Italic" size="37.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="rech_prod" labelFloat="true" layoutX="917.0" layoutY="76.0" onKeyPressed="#rech" prefHeight="37.0" prefWidth="218.0" promptText="Rechercher" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="1366.0" styleClass="godpane" stylesheets="@../css/mainSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InterfaceClientController">
+   <children>
+      <AnchorPane prefHeight="699.0" prefWidth="1366.0">
+         <children>
+            <ImageView id="TailleNormale" fx:id="optionTailleParDefaut" fitHeight="21.0" fitWidth="20.0" layoutX="1263.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+               <image>
+                  <Image url="@../resources/TailleParDefaut.png" />
+               </image>
+            </ImageView>
+            <Label id="Developped By" layoutX="1066.0" layoutY="679.0" text="Developped by TheSquad" textFill="WHITE" />
+            <Label id="Copyright" layoutX="30.0" layoutY="690.0" prefHeight="21.0" prefWidth="145.0" text="2019 Copyright" textFill="WHITE" />
+            <Pane layoutX="10.0" layoutY="9.0" prefHeight="108.0" prefWidth="165.0" style="-fx-background-color: #ffffff00;" />
+            <ImageView id="Fermer" fitHeight="21.0" fitWidth="20.0" layoutX="1302.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+               <image>
+                  <Image url="@../resources/Fermer.png" />
+               </image>
+            </ImageView>
+            <AnchorPane id="menuContainer" layoutX="10.0" layoutY="156.0" prefHeight="493.0" prefWidth="165.0" />
+            <AnchorPane id="AnchorPane" fx:id="GestionReclamation" layoutX="113.0" layoutY="50.0" prefHeight="678.0" prefWidth="1155.0">
+               <children>
+                  <TableView fx:id="tableView" layoutX="102.0" layoutY="164.0" onMouseClicked="#ShowOnClick" prefHeight="391.0" prefWidth="1086.0">
+                     <columns>
+                        <TableColumn fx:id="id_reclamation" prefWidth="149.0" text="id_reclamation" visible="false" />
+                        <TableColumn fx:id="nom_client" prefWidth="262.0" text="ProductRef" />
+                        <TableColumn fx:id="message" maxWidth="572.0" prefWidth="292.0" text="Desc" />
+                        <TableColumn fx:id="date_reclamation" prefWidth="329.0" text="Date" />
+                        <TableColumn fx:id="etat" prefWidth="202.0" text="etat" />
+                     </columns>
+                  </TableView>
+                  <HBox layoutX="236.0" layoutY="105.0" prefHeight="35.0" prefWidth="793.0">
+                     <children>
+                        <Button fx:id="btn99" mnemonicParsing="false" onAction="#handlebuttonAction" prefHeight="31.0" prefWidth="216.0" text="Nouvelle Reclamation" textOverrun="WORD_ELLIPSIS" />
+                        <Button fx:id="ButtonModifier" mnemonicParsing="false" onAction="#handlebuttonActionMod" prefHeight="31.0" prefWidth="205.0" text="Modifier" />
+                        <Button fx:id="ButtonSupprimer" mnemonicParsing="false" onAction="#Supprimer_rec" prefHeight="31.0" prefWidth="184.0" text="Supprimer" />
+                        <Button fx:id="btn98" mnemonicParsing="false" onAction="#changeSceneToDetailedReclamationView" prefHeight="31.0" prefWidth="203.0" text="Vue Reclamation">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label layoutX="72.0" layoutY="-37.0" prefHeight="86.0" prefWidth="401.0" text="Reclamation Client">
+                     <font>
+                        <Font name="System Bold" size="37.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="57.0" fitWidth="89.0" layoutX="1096.0" layoutY="94.0" onMouseClicked="#aff" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/refresh-button.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

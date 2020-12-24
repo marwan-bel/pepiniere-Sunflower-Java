@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="713.0" prefWidth="1219.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.AdminServiceController">
+    <children>
+        <Label layoutX="19.0" layoutY="17.0" prefHeight="30.0" prefWidth="292.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #7387A8;" text="Agent Service" />
+      <Separator layoutX="3.0" layoutY="55.0" prefHeight="4.0" prefWidth="1213.0" />
+      <ListView fx:id="listViewService" layoutX="65.0" layoutY="128.0" prefHeight="516.0" prefWidth="1088.0" />
+      <JFXComboBox fx:id="comboType" layoutX="116.0" layoutY="88.0" prefHeight="31.0" prefWidth="279.0" promptText="Service Type" />
+      <JFXComboBox fx:id="comboRegion" layoutX="839.0" layoutY="88.0" prefHeight="31.0" prefWidth="341.0" promptText="Region" />
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="120.0" layoutY="660.0" onAction="#ShowAdd" prefHeight="30.0" prefWidth="194.0" style="-fx-background-color: #00C0EF;" text="Add new service" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="update" buttonType="RAISED" layoutX="334.0" layoutY="660.0" onAction="#showUpdate" prefHeight="30.0" prefWidth="210.0" style="-fx-background-color: #F39C12;" text="update" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="581.0" layoutY="660.0" onAction="#DeleteService" prefHeight="30.0" prefWidth="194.0" style="-fx-background-color: #DD4B39;" text="delete " textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </JFXButton>
+      <Text layoutX="124.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Service Type" />
+      <Text layoutX="846.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Region" />
+    </children>
+    
+</AnchorPane>

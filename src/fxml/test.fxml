@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.TestController">
+     <children>
+      <JFXToolbar layoutX="184.0" layoutY="14.0" prefHeight="60.0" prefWidth="1359.0" style="-fx-min-height: 42; -fx-background-color: #222D32;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <Label prefHeight="23.0" prefWidth="228.0" style="-fx-font-size: 20; -fx-text-fill: #7387A8; -fx-font-weight: bold;" text="SunFlower" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Label>
+         </left>
+         <center>
+            <Pane prefHeight="51.0" prefWidth="1065.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="temp" layoutX="738.0" layoutY="-3.0" prefHeight="45.0" prefWidth="251.0" text="dd/mm/yyyy" textFill="#970a0a">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="54.0" fitWidth="51.0" layoutX="1062.0" onMouseClicked="#CheckPanier" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/carte.png" />
+                     </image>
+                 
+                  </ImageView>
+                  <ImageView fitHeight="52.0" fitWidth="53.0" layoutX="990.0" layoutY="1.0" onMouseClicked="#show_fav" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/favorite.png" />
+                     </image>
+                  
+                  </ImageView>
+               </children>
+            </Pane>
+         </center>
+      </JFXToolbar>
+      <VBox layoutY="60.0" prefHeight="700.0" prefWidth="140.0" spacing="20.0" style="-fx-background-color: #2A3F54;">
+         <children>
+            <Label prefHeight="60.0" prefWidth="140.0" style="-fx-alignment: center; -fx-font-size: 16; -fx-text-fill: #7387A8; -fx-border-color: #7387A8; -fx-border-width: 0 0 2 0;" text="MENU" />
+            <JFXButton fx:id="btnProduit" layoutX="10.0" layoutY="67.0" onMouseClicked="#Produit" prefHeight="42.0" prefWidth="139.0" style="-fx-alignment: baseline-center;" stylesheets="@../css/mainSheet.css" text="Produit" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               
+               <styleClass>
+                  <String fx:value="nav-button" />
+                  <String fx:value="bgProduit" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnPromotion" onMouseClicked="#Promotion" prefHeight="42.0" prefWidth="139.0" style="-fx-alignment: baseline-center;" stylesheets="@../css/mainSheet.css" text="Promotion" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="nav-button" />
+                  <String fx:value="bgAccueil" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnService" layoutX="10.0" layoutY="109.0" onMouseClicked="#Service" prefHeight="42.0" prefWidth="139.0" style="-fx-alignment: baseline-center;" stylesheets="@../css/mainSheet.css" text="Service" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               
+               <styleClass>
+                  <String fx:value="nav-button" />
+                  <String fx:value="bgService" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnEvenement" layoutX="10.0" layoutY="151.0" onMouseClicked="#event" prefHeight="42.0" prefWidth="139.0" style="-fx-alignment: baseline-center;" stylesheets="@../css/mainSheet.css" text="Evenement" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+             
+               <styleClass>
+                  <String fx:value="nav-button" />
+                  <String fx:value="bgEvent" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnRec" layoutX="10.0" layoutY="193.0" onMouseClicked="#reclamation" prefHeight="42.0" prefWidth="139.0" style="-fx-alignment: baseline-right;" stylesheets="@../css/mainSheet.css" text="Reclamation" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               
+               <styleClass>
+                  <String fx:value="nav-button" />
+                  <String fx:value="bgReclamation" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnForum" layoutX="10.0" layoutY="235.0" onMouseClicked="#forum" prefHeight="42.0" prefWidth="139.0" style="-fx-alignment: baseline-center;" stylesheets="@../css/mainSheet.css" text="Forum" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+             
+               <styleClass>
+                  <String fx:value="nav-button" />
+                  <String fx:value="bgForum" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnLogout" onMouseClicked="#Logout" prefHeight="42.0" prefWidth="139.0" style="-fx-alignment: baseline-right;" stylesheets="@../css/mainSheet.css" text="Deconnexion" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+            
+               <styleClass>
+                  <String fx:value="nav-button" />
+                  <String fx:value="bgDeconnexion" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <AnchorPane fx:id="holderPane" layoutX="140.0" layoutY="42.0" prefHeight="713.0" prefWidth="1219.0" />
+   </children>
+</AnchorPane>

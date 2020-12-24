@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="808.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EnvoyerReclamationController">
+   <children>
+      <JFXTextField fx:id="name" layoutX="205.0" layoutY="91.0" prefHeight="31.0" prefWidth="204.0" promptText="Last Name" />
+      <JFXTextField fx:id="refpro" layoutX="205.0" layoutY="146.0" prefHeight="31.0" prefWidth="204.0" promptText="Ref Product" />
+      <JFXTextArea fx:id="messa" layoutX="10.0" layoutY="385.0" promptText="Votre Message" />
+      <JFXTextField fx:id="codp" layoutX="205.0" layoutY="207.0" prefHeight="31.0" prefWidth="204.0" promptText="Code Postal" />
+      <JFXTextField fx:id="cit" layoutX="205.0" layoutY="268.0" prefHeight="31.0" prefWidth="204.0" promptText="City" />
+      <JFXTextField fx:id="tell" layoutX="205.0" layoutY="320.0" prefHeight="31.0" prefWidth="204.0" promptText="Phone" />
+      <JFXButton fx:id="btn135" layoutX="218.0" layoutY="676.0" onAction="#addRec" prefHeight="31.0" prefWidth="155.0" text="Envoyer" />
+   </children>
+</AnchorPane>
